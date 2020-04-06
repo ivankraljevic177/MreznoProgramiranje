@@ -6,10 +6,10 @@ client_socket = socket.socket()
 
 client_socket.connect((host, port))
 
-client_socket.sendall('tekst koji se salje serveru')
+
 
 data = client_socket.recv(1024)
-
+client_socket.sendall(data)
 print (data)
 client_socket.close()
 
